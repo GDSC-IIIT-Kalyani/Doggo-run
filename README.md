@@ -15,27 +15,25 @@ For the quick start, you can follow the steps below:
 git clone https://github.com/<your-github-username>/Doggo-run
 ```
 
-3. Navigate to the project directory.
+4. Navigate to the project directory.
 
 ```py
 cd Doggo-run
 ```
 
-4. Create a new branch.
+5. Create a new branch.
 
 ```yml
 git checkout -b <your_branch_name>
 ```
 
-Run the following command to install the required dependencies.
+Do the following
 
-1. `npm install ` - install the required dependencies
-2. `npm start` - start the development server
-3. Open http://localhost:3000 in your browser
+1. Open index.html with Live Server
 
-4. <a href="/CONTRIBUTING.md">Contribute</a>
+2. Make your desired contributions
 
-5. Stage your changes and commit
+3. Stage your changes and commit using following commands
 
 ```css
 git add -a
@@ -43,20 +41,20 @@ git add -a
 git commit -m "<your_commit_message>"
 ```
 
-7. Push your local commits to the remote repo.
+4. Push your local commits to the remote repo.
 
 ```yml
 git push -u origin <your_branch_name>
 ```
 
-8. Create a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" title="Pull Request">Pull-Request</a> to `main`.
+5. Create a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" title="Pull Request">Pull-Request</a> to `main`.
 
-9. Congratulations! 🎉 you've made your contribution to <a href="https://github.com/GDSC-IIIT-Kalyani/Winter-of-Code-2.0-frontend" title="Winter-of-Code-2.0-frontend">Winter-of-Code-2.0-frontend</a>.
+6. Congratulations! 🎉 You've made your contribution to <a href="https://github.com/GDSC-IIIT-Kalyani/Doggo-run" title="Doggo-run">Doggo-run</a>.
 
 <h1 id="contribute">Contributing</h1>
 
 <p>
-   Thank you for your interest in contributing to our Repo! Pull requests are welcome. For fixing typos, please make a PR with your fixes. For other contributions, we suggest you to read our <a href="/CONTRIBUTING.md">contribution guidelines</a> to see how you can contribute to this project. We are happy for every contribution. 
+   Thank you for your interest in contributing to our Repo! Pull requests are welcome. For fixing typos, please make a PR with your fixes. For other contributions, we suggest you to read our <a href="https://github.com/GDSC-IIIT-Kalyani/Doggo-run/blob/main/README.md">Contribution guidelines</a> to see how you can contribute to this project. We are happy for every contribution. 
    <hr> 
 </p>
 
