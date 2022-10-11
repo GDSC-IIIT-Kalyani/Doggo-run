@@ -275,5 +275,18 @@ window.addEventListener('keydown', ({key}) =>{
         if (gameSpeed <15)
             gameSpeed +=2
     }
+    
+    //with spacebar jump
+    if (key === ' '){
+        if (player.position.y >588){
+            player.velocity.y -=7;
+            player.jumping = true;
+        }
+    }
 
+    //with shift key duck
+    if (key === 'Shift'){
+        if(player.position.y +player.height +player.velocity.y <= canvas.height -50)
+            player.velocity.y +=7;
+    }
 })
