@@ -240,6 +240,11 @@ animate(0);
 
 
 window.addEventListener('keydown', ({key}) =>{
+    console.log("Key Pressed: ", key)//<- getting key code of input key
+    console.log("Doggo position in x axis: ", player.position.x)
+    console.log("Doggo position in y axis: ", player.position.y)
+    console.log("staggered Frames: ", player.staggeredframe);
+
     //with w key or up arrow jump
     if (key === 'w' || key === 'ArrowUp'){
         if (player.position.y >588){
@@ -270,4 +275,5 @@ window.addEventListener('keydown', ({key}) =>{
         if (gameSpeed <15)
             gameSpeed +=2
     }
+
 })
