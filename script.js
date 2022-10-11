@@ -237,33 +237,37 @@ function animate(timeStamp){
 }
 animate(0);
 
-//key controls
-window.addEventListener('keydown', ({keyCode}) =>{
-    console.log(keyCode)//<- getting kry code of input key
-    switch (keyCode){
-        
-        case 87: //w
-            if (player.position.y <588) break;
-            player.velocity.y -=7
-            break;
-        case 83: //s
-            if(player.position.y +player.height +player.velocity.y <= canvas.height -50)
-                player.velocity.y +=7;
-            break;
-        case 65: //a
-            if (player.staggeredframe<6 && player.staggeredframe>=3)player.staggeredframe++;
-            if (gameSpeed >4) 
 
-                gameSpeed -=4;
-            else if (gameSpeed<=4)
-                gameSpeed = 0;
-            break;
-        case 68: //d
-            if (player.staggeredframe<=6 && player.staggeredframe>3)player.staggeredframe--;
-            if (gameSpeed >15) break;
-            
+
+window.addEventListener('keydown', ({key}) =>{
+    //with w key or up arrow jump
+    if (key === 'w' || key === 'ArrowUp'){
+        if (player.position.y >588){
+            player.velocity.y -=7;
+            player.jumping = true;
+        }
+    }
+    //with s key or down arrow duck
+    if (key === 's' || key === 'ArrowDown'){
+        if(player.position.y +player.height +player.velocity.y <= canvas.height -50)
+            player.velocity.y +=7;
+    }
+    
+    //with a key or left arrow slow down
+    if (key === 'a' || key === 'ArrowLeft'){
+        if (player.staggeredframe<6 && player.staggeredframe>=3)
+            player.staggeredframe++;
+        if (gameSpeed >4) 
+            gameSpeed -=4;
+        else if (gameSpeed<=4)
+            gameSpeed = 0;
+    }
+
+    //with d key or right arrow speed up
+    if (key === 'd' || key === 'ArrowRight'){
+        if (player.staggeredframe<=6 && player.staggeredframe>3)
+            player.staggeredframe--;
+        if (gameSpeed <15)
             gameSpeed +=2
-            break;
-        case 32: //space      
     }
 })
