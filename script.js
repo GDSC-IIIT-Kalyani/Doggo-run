@@ -289,4 +289,23 @@ window.addEventListener('keydown', ({key}) =>{
         if(player.position.y +player.height +player.velocity.y <= canvas.height -50)
             player.velocity.y +=7;
     }
+
+    //unclock god mode when typed 'g'
+    if (key === 'g'){
+        godmode = true;
+    }
+    //disable god mode when typed 'n' again
+    if (key === 'n'){
+        godmode = false;
+    }
+
+    //with left control add mega jump
+    if (godmode == true){
+        if (key === 'Control'){
+            if (player.position.y >588){
+                player.velocity.y -=15;
+                player.jumping = true;
+            }
+        }
+    }
 })
