@@ -11,6 +11,7 @@ let  enemies = []
 //cage
 const cageImage = new Image();
 cageImage.src = './Assets/cage.png'
+
 //player 
 
 class Player{
@@ -49,6 +50,7 @@ class Player{
         this.n = 6;
         
     }
+
     drawPlayer (){
         ctx.fillStyle = 'black'
         ctx.drawImage(this.image,
@@ -61,6 +63,7 @@ class Player{
             this.width, 
             this.height)
     }
+
     updatePlayer(){
         this.position.y += this.velocity.y
         if (this.gameframe%this.staggeredframe ==0){
@@ -97,6 +100,7 @@ class Player{
     }
     
 }
+
 const player =  new Player()
 
 //enemydw
@@ -267,3 +271,12 @@ window.addEventListener('keydown', ({keyCode}) =>{
         case 32: //space      
     }
 })
+
+//start game
+function startGame() {
+    let startDiv = document.getElementById("start");
+    let gameCanvas = document.getElementById("canvasbg");
+
+    startDiv.style.display = "none";
+    gameCanvas.style.display = "block";
+}
