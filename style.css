@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Fredericka+the+Great&family=JetBrains+Mono:wght@500&family=Nabla&family=Poiret+One&display=swap');
+
 body{
     background-color: black;
 }
-#canvasbg{
+#canvasbg {
     position: absolute;
     height : 700px;
     width: 1200px;
@@ -9,5 +11,83 @@ body{
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: -1;
+}
 
+#start {
+    height: 60vh;
+    width: 50%;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    margin: 9% 0 10% 24.5%;
+    background: rgb(51 64 86 / 80%);
+    border: 0.15em solid #fff; 
+}
+
+#start .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+#start .container h1 {
+    color: #fff;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 4em;
+    margin: 0 0 0.8em 0;
+}
+
+#start .container .instruction {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
+#start .container img {
+    height: 20%;
+    width: 20%;
+}
+
+#start .container p {
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    margin-right: -2em;
+    margin-left: 5%;
+}
+
+#start .container a.button {
+    display:inline-block;
+    padding:0.4em 1.5em;
+    border:0.1em solid #FFFFFF;
+    margin:1.5em 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-size: 1.5em;
+    font-weight:500;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    }
+
+#start .container a.button:hover{
+    color:#000000 !important;
+    background-color:#FFFFFF;
+    }
+
+@media all and (max-width:30em){
+    a.button{
+    display:block;
+    margin:0.4em auto;
+    }
 }
